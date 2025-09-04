@@ -2,7 +2,7 @@
 #include<math.h>
 
 int main(){
-    int n, i , j ;
+    int n, i , j=0 ;
     printf("enter un nombre  : ");
     scanf("%d",&n);
 
@@ -13,10 +13,10 @@ int main(){
         }   
         
     }
-    if ( j == 2 ){
-            printf("premier ");
-    }else{
+    if ( j != 2 ){
             printf("pas premier ");
+    }else{
+            printf("premier ");
     }
     
     return 0;
