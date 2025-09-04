@@ -11,6 +11,7 @@ int main(){
         p = n*i ;
         s = s +p;
         printf("%d*%d=%d\n", n,i,p);
+        
     }
     printf("la sommes est : %d ", s);
     return 0;
