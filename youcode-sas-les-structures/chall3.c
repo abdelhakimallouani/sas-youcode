@@ -5,6 +5,10 @@ typedef struct Rectangle{
     float largeur;
 } Rectangle;
 
+float air(float longueur , float largeur){
+    float r = longueur * largeur ;
+    return r ;
+}
 
 int main() {
     Rectangle rectangle;
@@ -15,8 +19,8 @@ int main() {
     printf("entrer la largeur du rectangle: ");
     scanf("%f",&rectangle.largeur);
 
-    float r = rectangle.longueur * rectangle.largeur ;
-    printf("aire du rectangle est: %.2f\n", r);
+    float r1= air(rectangle.longueur,rectangle.largeur) ;
+    printf("aire du rectangle est: %.2f\n", r1);
 
     return 0;
 }
