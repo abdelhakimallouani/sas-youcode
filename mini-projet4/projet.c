@@ -21,7 +21,6 @@ typedef struct Cours{
 
 
 etudiant ajouteretud( etudiant etud[50]) {
-    getchar();
 
     for (int i = 0; i < nbr; i++)
     {
@@ -32,11 +31,11 @@ etudiant ajouteretud( etudiant etud[50]) {
     printf("Entrer le nom etidiant %d: ",i+1);
     fgets(etud[i].nom, sizeof(etud[i].nom), stdin);
     etud[i].nom[strcspn(etud[i].nom, "\n")] = '\0';
-    getchar();
+
     printf("Entrer le prenom etidiant %d: ",i+1);
     fgets(etud[i].prenom, sizeof(etud[i].prenom), stdin);
     etud[i].prenom[strcspn(etud[i].prenom, "\n")] = '\0';
-    getchar();
+
     printf("Entrer l age etidiant %d: ",i+1);
     scanf("%d",&etud[i].age);
     getchar();
@@ -59,7 +58,6 @@ cours ajoutercour( cours cour[50]) {
     printf("Entrer le nom de cour %d: ",i+1);
     fgets(cour[i].nomc, sizeof(cour[i].nomc), stdin);
     cour[i].nomc[strcspn(cour[i].nomc, "\n")] = '\0';
-    getchar();
 
     printf("Entrer la credits %d: ",i+1);
     scanf("%d",&cour[i].credits);
@@ -103,6 +101,7 @@ etudiant rechercheetud(etudiant etud[50]){
 
     printf("enter la id d'etudaint rechercher :");
     scanf("%d",&id1);
+    getchar();
     for (int i = 0; i < nbr; i++)
     {
         if (etud[i].id == id1)
@@ -113,7 +112,6 @@ etudiant rechercheetud(etudiant etud[50]){
         printf("L'age : %d\n", etud[i].age);
         printf("La moyenne : %f\n", etud[i].moy);
         }
-        
         
     }
     
