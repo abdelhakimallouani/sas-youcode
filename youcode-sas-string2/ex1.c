@@ -4,7 +4,7 @@
 
 void minuscule(char* car) {
     for (int i = 0; i < strlen(car); i++) {
-        car[i] = tolower((char)car[i]);
+        car[i] = tolower(car[i]);
     }
 }
 
