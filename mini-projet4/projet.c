@@ -98,12 +98,31 @@ cours affichecour(cours cour[50]) {
     }
 }
 
+etudiant rechercheetud(etudiant etud[50]){
+    int id1;
+
+    printf("enter la id d'etudaint rechercher :");
+    scanf("%d",&id1);
+    for (int i = 0; i < nbr; i++)
+    {
+        if (etud[i].id == id1)
+        {
+        printf("la id d'etudaint : %d\n", etud[i].id);
+        printf("le nom : %s\n", etud[i].nom);
+        printf("le prenom : %s\n", etud[i].prenom);
+        printf("L'age : %d\n", etud[i].age);
+        printf("La moyenne : %f\n", etud[i].moy);
+        }
+        
+        
+    }
+    
+}
+
 
 int main() {
-    etudiant etud1[100];
-    etudiant etud2[100];
-    cours cour1[100];
-    cours cour2[100];
+    etudiant etud[100];
+    cours cour[100];
 
     printf("Entrer le nombre des etudiants : ");
     scanf("%d",&nbr);
@@ -117,15 +136,17 @@ int main() {
         printf("2. Ajouter des cours\n");
         printf("3. Afficher la liste des etudiants\n");
         printf("4. Afficher la liste des cours\n");
+        printf("5. Rechercher un etudiant\n");
         printf("0. Quitter\n");
         printf("Choix : ");
         scanf("%d", &choix);
 
         switch (choix) {
-            case 1: ajouteretud(etud1); break;
-            case 2: ajoutercour(etud2); break;
-            case 3: afficheetud(cour1); break;
-            case 4: affichecour(cour2); break;
+            case 1: ajouteretud(etud); break;
+            case 2: ajoutercour(cour); break;
+            case 3: afficheetud(etud); break;
+            case 4: affichecour(cour); break;
+            case 5: rechercheetud(etud); break;
             case 0: printf("Au revoir !\n"); break;
             default: printf("Choix invalide !\n"); break;
         }
